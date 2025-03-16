@@ -1,11 +1,11 @@
 import React from "react";
-import axios from "axios"
-import { FidgetSpinner } from 'react-loader-spinner'
+import axios from "axios";
+import { FidgetSpinner } from 'react-loader-spinner';
 
 
 export default function Weather(props) {
     function handleResponse(response) {
-        alert(`The weather in ${response.data.name} is ${response.data.main.temp}C`)
+        alert(`The weather in ${response.data.name} is ${response.data.main.temp}C`);
     }
     
     const apiKey = `701f06352d61835bc4fc894e7b084629`;
@@ -22,5 +22,5 @@ export default function Weather(props) {
             wrapperStyle={{}}
             wrapperClass="fidget-spinner-wrapper"
         />
-    )
+    );
 }
