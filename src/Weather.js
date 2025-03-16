@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { FidgetSpinner } from 'react-loader-spinner';
+import { InfinitySpin } from 'react-loader-spinner';
 
 
 export default function Weather(props) {
@@ -14,13 +14,11 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
     
     return (
-        <FidgetSpinner
+        (<InfinitySpin
             visible={true}
-            height="80"
-            width="80"
-            ariaLabel="fidget-spinner-loading"
-            wrapperStyle={{}}
-            wrapperClass="fidget-spinner-wrapper"
-        />
+            width="200"
+            color="yellow"
+            ariaLabel="infinity-spin-loading"
+            />)
     );
 }
